@@ -16,7 +16,8 @@ let project = Project.makeAppModule(
     packages: [],
     internalDependencies: [
         .data,
-        .Feature.splash
+        .Feature.splash,
+        .Feature.main
     ]
 )
 

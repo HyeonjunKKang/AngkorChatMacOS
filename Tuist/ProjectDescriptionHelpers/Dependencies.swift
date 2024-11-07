@@ -23,6 +23,13 @@ public extension TargetDependency {
                 "Projects/Features/RootFeature"
             )
         )
+        
+        public static let main: TargetDependency = .project(
+            target: "MainFeature",
+            path: .relativeToRoot(
+                "Projects/Features/MainFeature"
+            )
+        )
     }
     
     static let data: TargetDependency = .project(

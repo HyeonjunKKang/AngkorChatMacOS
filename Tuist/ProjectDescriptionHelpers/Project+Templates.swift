@@ -52,7 +52,7 @@ public extension Project {
                     product: .app,
                     bundleId: "\(bundleIDPrefix).\(name)",
                     deploymentTargets: deploymentTargets,
-                    infoPlist: .default,
+                    infoPlist: .file(path: "\(name)-info.plist"),
                     sources: ["Sources/**/*.swift"],
                     entitlements: "\(name).entitlements",
                     scripts: [],
@@ -110,7 +110,7 @@ public extension Project {
         }
         
         var schemes: [Scheme] = []
-        if targets.contains(.demo) || name.contains("Debug") {
+        if targets.contains(.demo) {
             schemes.append(Scheme.makeDemoScheme(configs: "Debug", name: name))
         } else {
             schemes.append(Scheme.makeScheme(configs: "Release", name: name))
