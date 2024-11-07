@@ -8,3 +8,23 @@
 
 import AppKit
 
+open class BaseCoordinator: Coordinator {
+    
+    public var window: NSWindow
+    
+    public var id: String = UUID().uuidString
+    
+    public var childCoordiantors: [String : Coordinator] = [:]
+    
+    public init(window: NSWindow) {
+        self.window = window
+    }
+    
+    open func start() {
+        
+    }
+    
+    open func finish() {
+        childCoordiantors.removeAll()
+    }
+}

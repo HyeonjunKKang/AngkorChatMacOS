@@ -8,6 +8,6 @@ let project = Project.makeAppModule(
     deploymentTargets: .macOS("15.0"),
     packages: [],
     internalDependencies: [
-        .core
+        .domain
     ]
 )

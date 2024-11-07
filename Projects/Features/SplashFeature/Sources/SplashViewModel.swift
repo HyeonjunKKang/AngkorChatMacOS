@@ -8,14 +8,11 @@
 
 import Foundation
 
-public protocol SplashViewModelType {
-    var id: String { get set }
-    var password: String { get set }
+enum SplashViewResult {
     
-    func login()
 }
 
-public final class SplashViewModel: SplashViewModelType {
+public final class SplashViewModel: ObservableObject {
     
     @MainActor public var id: String = ""
     @MainActor public var password: String = ""

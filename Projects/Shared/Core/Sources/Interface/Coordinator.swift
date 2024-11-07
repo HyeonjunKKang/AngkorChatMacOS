@@ -8,15 +8,15 @@
 
 import AppKit
 
-public protocol Coordinator: AnyObject {
+@objc public protocol Coordinator: AnyObject {
     
     var id: String { get }
     
-    var childCoordiantors: [String : any Coordinator] { get set }
+    var childCoordiantors: [String : Coordinator] { get set }
     
     var window: NSWindow { get set }
     
-    var finishDelegate: CoordinatorFinishDelegate? { get set }
+    @objc optional var finishDelegate: CoordinatorFinishDelegate? { get }
     
     func start()
     
@@ -33,6 +33,6 @@ public extension Coordinator {
     }
 }
 
-public protocol CoordinatorFinishDelegate: AnyObject {
+@objc public protocol CoordinatorFinishDelegate: AnyObject {
     
 }

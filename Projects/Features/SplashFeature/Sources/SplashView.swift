@@ -13,6 +13,12 @@ public struct SplashView: View {
     @State private var userID: String = ""
     @State private var password: String = ""
     
+    private let result: (() -> Void)
+    
+    public init(result: @escaping () -> Void) {
+        self.result = result
+    }
+    
     public var body: some View {
         
         ZStack {
@@ -43,7 +49,7 @@ public struct SplashView: View {
                 
                 Button(
                     action: {
-                        
+                        result()
                     },
                     label: {
                         Text("로그인")
@@ -55,10 +61,4 @@ public struct SplashView: View {
             .padding()
         }
     }
-    
-    public init(){}
-}
-
-#Preview {
-    SplashView()
 }

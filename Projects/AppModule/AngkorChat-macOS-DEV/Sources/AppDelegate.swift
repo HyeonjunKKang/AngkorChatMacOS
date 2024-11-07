@@ -6,14 +6,29 @@
 //  Copyright © 2024 clamp. All rights reserved.
 //
 
-import SwiftUI
+import Cocoa
+import Core
+import RootFeature
 
 @main
-struct AngkorChatApp: App {
+class AppDelegate: NSObject, NSApplicationDelegate {
     
-    var body: some Scene {
-        WindowGroup {
-            Color.red
-        }
+    var rootCoordinator: RootCoordinator?
+    
+    static func main() {
+        let app = NSApplication.shared
+        let delegate = AppDelegate()
+        app.delegate = delegate
+        app.run()
+    }
+    
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
+        let window = BaseWindow()
+        rootCoordinator = RootCoordinator(window: window)
+        rootCoordinator?.start()
+    }
+    
+    func applicationWillFinishLaunching(_ notification: Notification) {
+        print("applicationWillFinishLaunching")
     }
 }

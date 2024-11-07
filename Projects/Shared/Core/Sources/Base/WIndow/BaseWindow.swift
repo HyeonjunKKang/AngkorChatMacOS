@@ -6,4 +6,8 @@
 //  Copyright © 2024 clamp. All rights reserved.
 //
 
-import Foundation
+import AppKit
+
+open class BaseWindow: NSWindow {
+    
+}
