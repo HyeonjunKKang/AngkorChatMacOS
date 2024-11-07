@@ -2,7 +2,7 @@ import ProjectDescription
 import ProjectDescriptionHelpers
 
 let project = Project.makeAppModule(
-    name: "Splash",
+    name: "SplashFeature",
     targets: [.dynamicFramework, .demo],
     destinations: .macOS,
     deploymentTargets: .macOS("15.0"),

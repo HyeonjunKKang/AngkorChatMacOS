@@ -12,15 +12,15 @@ public extension TargetDependency {
     
     struct Feature {
         public static let splash: TargetDependency = .project(
-            target: "Splash",
+            target: "SplashFeature",
             path: .relativeToRoot(
-                "Projects/Features/Splash"
+                "Projects/Features/SplashFeature"
             )
         )
         public static let root: TargetDependency = .project(
-            target: "Root",
+            target: "RootFeature",
             path: .relativeToRoot(
-                "Projects/Features/Root"
+                "Projects/Features/RootFeature"
             )
         )
     }

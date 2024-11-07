@@ -9,7 +9,7 @@ import ProjectDescription
 import ProjectDescriptionHelpers
 
 let project = Project.makeAppModule(
-    name: "Root",
+    name: "RootFeature",
     targets: [.dynamicFramework],
     destinations: .macOS,
     deploymentTargets: .macOS("15.0"),
