@@ -30,6 +30,11 @@ public extension TargetDependency {
                 "Projects/Features/MainFeature"
             )
         )
+        
+        public static let baseFeatureInterface: TargetDependency = .project(
+            target: "BaseFeatureInterface",
+            path: .relativeToRoot("Projects/Features/BaseFeatureInterface")
+        )
     }
     
     static let data: TargetDependency = .project(
@@ -50,6 +55,11 @@ public extension TargetDependency {
     static let thirdPartyLibs: TargetDependency = .project(
         target: "ThirdPartyLibs",
         path: .relativeToRoot("Projects/Shared/ThirdPartyLibs")
+    )
+    
+    static let dsKit: TargetDependency = .project(
+        target: "DSKit",
+        path: .relativeToRoot("Projects/Shared/DSKit")
     )
     
     static let network: TargetDependency = .project(
