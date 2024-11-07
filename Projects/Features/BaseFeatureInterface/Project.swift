@@ -2,12 +2,14 @@ import ProjectDescription
 import ProjectDescriptionHelpers
 
 let project = Project.makeAppModule(
-    name: "MainFeature",
-    targets: [.dynamicFramework, .demo],
+    name: "BaseFeatureInterface",
+    targets: [.dynamicFramework],
     destinations: .macOS,
     deploymentTargets: .macOS(Configs.minimumTarget),
     packages: [],
     internalDependencies: [
-        .Feature.baseFeatureInterface
+        .dsKit,
+        .domain
     ]
 )
+
