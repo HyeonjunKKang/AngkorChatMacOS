@@ -28,9 +28,7 @@ public final class SplashCoordinator: BaseCoordinator {
     }
     
     private func showSplash() {
-        let splashView = SplashView(result: { [weak self] in
-            self?.finish()
-        })
+        let splashView = SplashView.build()
         let hostingController = NSHostingController(rootView: splashView)
         window.contentView = hostingController.view
         window.makeKeyAndOrderFront(nil)
