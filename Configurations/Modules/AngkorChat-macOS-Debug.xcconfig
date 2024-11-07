@@ -6,6 +6,7 @@
 
 // Import base application settings
 #include "../Base/Targets/Application.xcconfig"
+#include "../Base/Configurations/Debug.xcconfig"
 
 // Apply common settings specific to macOS
 #include "Base.xcconfig"

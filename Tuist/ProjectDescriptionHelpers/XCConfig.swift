@@ -17,14 +17,14 @@ public struct XCConfig {
     }
     
     public static let framework: [Configuration] = [
-        .debug(name: "DEV", xcconfig: Path.framework),
-        .release(name: "PROD", xcconfig: Path.framework),
+        .debug(name: "Debug", xcconfig: Path.framework),
+        .release(name: "Release", xcconfig: Path.framework),
     ]
     
     public static func projectConfiguration(name: String, destination: Destinations) -> [Configuration] {
         return [
-            .debug(name: "DEV", xcconfig: Path.xcconfigs(name: name, config: "DEV", destination: destination)),
-            .release(name: "PROD", xcconfig: Path.xcconfigs(name: name, config: "PROD", destination: destination))
+            .debug(name: "Debug", xcconfig: Path.xcconfigs(name: name, config: "Debug", destination: destination)),
+            .release(name: "Release", xcconfig: Path.xcconfigs(name: name, config: "Release", destination: destination))
         ]
     }
 }

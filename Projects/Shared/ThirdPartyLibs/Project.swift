@@ -3,7 +3,7 @@ import ProjectDescriptionHelpers
 
 let project = Project.makeAppModule(
     name: "ThirdPartyLibs",
-    targets: [.dynamicFramework],
+    targets: [.staticFramework],
     destinations: .macOS,
     deploymentTargets: .macOS("15.0"),
     packages: [],

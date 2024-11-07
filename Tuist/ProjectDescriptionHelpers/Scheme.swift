@@ -26,6 +26,23 @@ public extension Scheme {
         )
     }
     
+    static func makeDebugScheme(configs: ConfigurationName, name: String) -> Scheme {
+        return scheme(
+            name: name,
+            shared: true,
+            buildAction: .buildAction(targets: ["\(name)"]),
+            testAction: .targets(
+                ["\(name)Tests"],
+                configuration: configs,
+                options: .options(coverage: true, codeCoverageTargets: ["\(name)"])
+            ),
+            runAction: .runAction(configuration: configs),
+            archiveAction: .archiveAction(configuration: configs),
+            profileAction: .profileAction(configuration: configs),
+            analyzeAction: .analyzeAction(configuration: configs)
+        )
+    }
+    
     static func makeDemoScheme(configs: ConfigurationName, name: String) -> Scheme {
         return scheme(
             name: "\(name)Demo" ,
