@@ -8,6 +8,6 @@ let project = Project.makeAppModule(
     deploymentTargets: .macOS(Configs.minimumTarget),
     packages: [],
     internalDependencies: [
-        .baseFeatureInterface
+        .Feature.baseFeatureInterface
     ]
 )
