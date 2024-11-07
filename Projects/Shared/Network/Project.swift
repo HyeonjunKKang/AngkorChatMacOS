@@ -5,7 +5,7 @@ let project = Project.makeAppModule(
     name: "Network",
     targets: [.dynamicFramework],
     destinations: .macOS,
-    deploymentTargets: .macOS("15.0"),
+    deploymentTargets: .macOS(Configs.minimumTarget),
     packages: [],
     internalDependencies: [
         .domain

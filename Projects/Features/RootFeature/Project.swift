@@ -12,7 +12,7 @@ let project = Project.makeAppModule(
     name: "RootFeature",
     targets: [.dynamicFramework],
     destinations: .macOS,
-    deploymentTargets: .macOS("15.0"),
+    deploymentTargets: .macOS(Configs.minimumTarget),
     packages: [],
     internalDependencies: [
         .data,

@@ -5,7 +5,7 @@ let project = Project.makeAppModule(
     name: "AngkorChat-macOS-Release",
     targets: [.app],
     destinations: .macOS,
-    deploymentTargets: .macOS("15.0"),
+    deploymentTargets: .macOS(Configs.minimumTarget),
     packages: [],
     internalDependencies: [
         .Feature.root
